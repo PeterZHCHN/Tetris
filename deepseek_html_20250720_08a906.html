@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科幻俄罗斯方块</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="tetris" width="300" height="600"></canvas>
+        <div id="sidebar">
+            <div class="panel">
+                <h2>分数</h2>
+                <div id="score">0</div>
+            </div>
+            
+            <div class="panel">
+                <h2>等级</h2>
+                <div id="level">1</div>
+                <div id="level-stars">
+                    <div class="star">★</div>
+                    <div class="star">★</div>
+                    <div class="star">★</div>
+                </div>
+            </div>
+            
+            <div class="panel">
+                <h2>下一个</h2>
+                <canvas id="next-piece" width="120" height="120"></canvas>
+            </div>
+            
+            <div class="panel" id="controls">
+                <h2>控制</h2>
+                <button id="start-btn">开始游戏</button>
+                <button id="pause-btn">暂停</button>
+                <p>方向键: 移动<br>上键: 旋转<br>空格: 快速下落</p>
+            </div>
+        </div>
+    </div>
+    
+    <div id="game-over">
+        <h1>游戏结束</h1>
+        <p>最终分数: <span id="final-score">0</span></p>
+        <p>达到等级: <span id="final-level">1</span></p>
+        <button id="restart-btn">重新开始</button>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
